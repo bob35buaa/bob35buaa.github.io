@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projectpage of GMTalker</title>
+    <!-- Bootstrap -->
+    <link href="assets/GMTalker/css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  </head>
+
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>GMTalker: Gaussian Mixture-based Audio-Driven <br> Emotional talking video Portraits </h2>
+           <h4 style="color:#5a6268;">arXiv 2024</h4>
+            <hr>
+            <h6> <a href="https://bob35buaa.github.io/" target="_blank">Yibo Xia<sup>&dagger;,1</sup></a>,
+                <a href="https://lizhenwangt.github.io" target="_blank">Lizhen Wang<sup>2</sup></a>,
+                <a target="_blank">Xiang Deng<sup>2</sup></a>,
+                <a href="http://shi.buaa.edu.cn/luoxiaoyan/zh_CN/index.htm" target="_blank">Xiaoyan Luo<sup>&#x2709,1</sup></a>,
+                <a href="https://liuyebin.com" target="_blank">Yebin Liu<sup>2</sup></a></h6>
+            <p><sup>1</sup>Beihang University<sup>&nbsp;&nbsp;&nbsp;&nbsp;2</sup>Tsinghua University
+            <br><sup>&#x2709</sup>Corresponding author <sup>&nbsp;&nbsp;&nbsp;&nbsp;&dagger;</sup>Work done during an internship at Tsinghua University
+            </p>
+            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
+                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
+
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/pdf/2312.07669" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Paper</a> </p>
+              </div>
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" href="https://youtu.be/2trbEOCUkgo" role="button"  target="_blank">
+                  <i class="fa fa-youtube"></i> Video</a></p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+<!--             <video width="90%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                  <source src="assets/motivation.mp4" type="video/mp4">
+            </video> -->
+            <img src="assets/GMTalker/images/teaser.png" width="100%" alt=""/>
+              <!-- <br><br> -->
+          <p class="text-left">  
+            Synthesizing high-fidelity and emotion-controllable talking video portraits, with audio-lip sync, vivid expressions, realistic head poses, and eye blinks, 
+            has been an important and challenging task in recent years. Most existing methods suffer in achieving personalized and precise emotion control, 
+            smooth transitions between different emotion states, and the generation of diverse motions. 
+            To tackle these challenges, we present GMTalker, a Gaussian mixture-based emotional talking portraits generation framework.
+            Specifically, we propose a Gaussian mixture-based expression generator that can construct a continuous and disentangled latent space, achieving more flexible emotion manipulation. 
+            Furthermore, we introduce a normalizing flow-based motion generator pretrained on a large dataset with a wide-range motion to generate diverse head poses, blinks, and eyeball movements.
+            Finally, we propose a personalized emotion-guided head generator with an emotion mapping network that can synthesize high-fidelity and faithful emotional video portraits.
+            Both quantitative and qualitative experiments demonstrate our method outperforms previous methods in image quality, photo-realism, emotion accuracy, and motion diversity.
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Emotion Control</h3>
+          <h6 style="color:#8899a5"> Given the same speech, we can generate the target emotional expressions as well as various head motions.  
+          </h6>
+            <hr style="margin-top:0px">
+            <video width="100%" autoplay loop="loop" preload="", muted="false", controls>
+              <source src="assets/GMTalker/videos/emo_control.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Intensity Control</h3>
+          <h6 style="color:#8899a5">Our GMTalker can also control the intensity of generated portrait.</h6>
+            <hr style="margin-top:0px">
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+              <source src="assets/GMTalker/videos/inten_control.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Emotion Manipulate</h3>
+          <h6 style="color:#8899a5"> We can manipulate emotion categories and intensity flexibly by interpolating in our continues and disentangled Gaussian mixture latent space.
+          </h6>
+            <hr style="margin-top:0px">
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+              <source src="assets/GMTalker/videos/emo_manipulate1.mp4" type="video/mp4">
+            </video>
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+              <source src="assets/GMTalker/videos/emo_manipulate2.mp4" type="video/mp4">
+            </video>
+              <!-- <br><br> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Blink&Gaze Control</h3>
+          <h6 style="color:#8899a5"> Our method can generate eye blinks and gaze from audio or sampling by time step. </h6>
+            <hr style="margin-top:0px">
+            <table border="0" width="100%" align="center">
+              <tr>
+                <td width='50%' align="center">
+                  <video width="75%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+                    <source src="assets/GMTalker/videos/W015_neu_009_audio-2_3_152_2.mp4" type="video/mp4">
+                  </video>
+                </td>
+                <td width='50%' align="center">
+                  <video width="75%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+                    <source src="assets/GMTalker/videos/W009_neu_007_self_audio-1_1_206.mp4" type="video/mp4">
+                  </video>
+                </td>
+              </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br> -->
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Comparison with Emotion-controllable Methods</h3>
+            <hr style="margin-top:0px">
+          <h6 style="color:#8899a5"> We compare our GMTalker with emotion-controllable state-of-the-art methods and some representative methods on MEAD and CREMA-D dataset.
+            <br>Our approach excels in generating detailed emotional facial expressions and faithful to the ground truth emotion states and motions. </h6>
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+              <source src="assets/GMTalker/videos/compare_mead1.mp4" type="video/mp4">
+            </video>
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+              <source src="assets/GMTalker/videos/compare_mead2.mp4" type="video/mp4">
+            </video>
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+              <source src="assets/GMTalker/videos/compare_cremad.mp4" type="video/mp4">
+            </video>
+            <!-- <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+              <source src="assets/GPS-Gaussian/videos/zby_live.mp4" type="video/mp4">
+            </video>
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+              <source src="assets/GPS-Gaussian/videos/multi_live.mp4" type="video/mp4">
+            </video> -->
+              <!-- <br><br> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Emotion Interpolation Comparison</h3>
+            <hr style="margin-top:0px">
+          <h6 style="color:#8899a5"> We further conduct the emotion interpolation study to compare the continuity and decoupling of emotion interpolation.
+            <br>Our method achieve smoother emotion transitions while maintaining emotion accuracy and lip-sync.</h6>
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+              <source src="assets/GMTalker/videos/compare_interp.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Comparison with Pose-controllable Methods</h3>
+            <hr style="margin-top:0px">
+          <h6 style="color:#8899a5"> To demonstrate the diversity of our generated motion, we compare our GMTalker with several state-of-the-art pose-controllable methods on LSP datasets. </h6>
+            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="false", controls>
+              <source src="assets/GMTalker/videos/compare_LSP.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+          <div class="col-12 text-center">
+            <h3>Method</h3>
+              <hr style="margin-top:0px">
+            <img src="assets/GMTalker/images/pipeline.jpg" width="100%" alt=""/>
+            <p>&nbsp;</p>
+            <p>
+              <b>Pipeline of GMTalker</b>. Our framework consists of three parts: (a) In the first part, given the input speech and emotion weights label, we propose GMEG to generate 3DMM expression coefficients sampling from Gaussian mixture latent space. (b) In the second part, we introduce NFMG to predict motion coefficients from the audio, including poses, eye blinks, and gaze. (c) In the third part, we render these coefficients to 3DMM renderings for the target person and then use an emotion-guided head generator with EMN to synthesize photo-realistic video portraits with personalized style.
+            </p>
+            <p>&nbsp;</p>
+          </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Demo Video</h3>
+            <hr style="margin-top:0px">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe style="clip-path: inset(1px 1px)" width="100%" height="100%" src="https://youtu.be/2trbEOCUkgo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- citing -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@article{xia2024gmtalker,
+  title={GMTalker: Gaussian Mixture-based Audio-Driven Emotional talking video Portraits},
+  author={Xia, Yibo and Wang, Lizhen and Deng, Xiang and Luo, Xiaoyan and Liu, Yebin},
+  journal={arXiv},
+  year={2024}
+}</code></pre>
+          <hr>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center" style="margin-bottom:10px">
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template.
+  </footer>
+
+</body>
+</html>
